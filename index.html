@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <!-- lg nav -->
+            <div class="bg-slate-500 hidden md:block px-5">
+                <div class="flex justify-between items-center">
+                    <div class="logo">
+                        <h4>Navbar</h4>
+                    </div>
+                    <ul class="gap-5 py-5" style="display: flex;">
+                        <li>Home</li>
+                        <li>Blog</li>
+                        <li>About</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- sm nav -->
+            <div class="md:hidden bg-slate-500 px-3 py-1">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <i class="fa-solid fa-bars" onclick="toggle()"></i>
+                    </div>
+                    <div>
+                        <span>Navbar</span>
+                    </div>
+                </div>
+                <ul id="sm-nav-ul" class="hidden space-y-1 text-center">
+                    <li class="hover:bg-gray-300 border">Home</li>
+                    <li class="hover:bg-gray-300 border">Blog</li>
+                    <li class="hover:bg-gray-300 border">About</li>
+                </ul>
+            </div>
+        </nav>
+        <!-- banner section -->
+        <section class="container mx-auto">
+            <div class="banner-container h-96 border">
+                <img class="aspect-[12/3]" style="object-fit: cover; object-position: center;" src="./images/banner.jpg" alt="banner">
+            </div>
+        </section>
+    </header>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
